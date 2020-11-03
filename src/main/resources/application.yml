@@ -1,0 +1,28 @@
+
+server:
+  port: ${EXAMPLE_API_PORT:8087}
+
+spring:
+  application:
+    name: example
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/teste
+    username: admin
+    password: secret
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+
+application:
+  security:
+    jjwt:
+      secret: ${EXAMPLE_API_JWT_SECRET:ThisIsSecretForJWTHS512SignatureAlgorithmThatMUSTHave512bitsKeySize}
+      expiration: 31536000 # A year in seconds
