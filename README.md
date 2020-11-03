@@ -13,3 +13,7 @@ Here is the [Spring Initializer](https://start.spring.io/#!type=gradle-project&l
 - Spring Data JPA
 - PostgresSQL Driver
 - JJWT
+
+#### Some improvements yet to do:
+
+-[ ] Store and Get user from database with a JPA repository.
